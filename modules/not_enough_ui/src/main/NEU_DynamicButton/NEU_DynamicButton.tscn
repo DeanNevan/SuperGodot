@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://c47n6p6beylt2"]
+
+[ext_resource type="Script" path="res://modules/not_enough_ui/src/main/NEU_DynamicButton/NEU_DynamicButton.gd" id="1_idbtl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7b533"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tjuv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_meuoc"]
+bg_color = Color(0.317647, 0.317647, 0.317647, 1)
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0fvh"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+
+[node name="NEU_DynamicButton" type="MarginContainer"]
+custom_minimum_size = Vector2(140, 60)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -992.0
+offset_bottom = -579.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idbtl")
+style_margin = SubResource("StyleBoxFlat_7b533")
+style_left_side = SubResource("StyleBoxFlat_6tjuv")
+style_fill_background = SubResource("StyleBoxFlat_meuoc")
+style_fill_fill = SubResource("StyleBoxFlat_k0fvh")
+text = "text1234"
+debug_state = 1
+
+[node name="Margin" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7b533")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Fill" type="ProgressBar" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_meuoc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k0fvh")
+show_percentage = false
+
+[node name="LeftSide" type="Panel" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6tjuv")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_right = 7
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/MarginContainer/HBoxContainer2"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LabelText" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "text1234"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
