@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds3ocayptqvsh"]
+
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_TabButton/GSP_TabButton.gd" id="1_2r6f7"]
+
+[node name="GSP_TabButton" type="Button"]
+custom_minimum_size = Vector2(120, 40)
+text = "游戏"
+script = ExtResource("1_2r6f7")

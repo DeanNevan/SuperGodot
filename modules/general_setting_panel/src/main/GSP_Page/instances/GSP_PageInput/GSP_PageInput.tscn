@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn5785x2syat7"]
+
+[ext_resource type="PackedScene" uid="uid://dy3ht2gqsx14e" path="res://modules/general_setting_panel/src/main/GSP_Page/GSP_Page.tscn" id="1_yaxct"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_Page/instances/GSP_PageInput/GSP_PageInput.gd" id="2_qpfcg"]
+
+[node name="GSP_PageInput" instance=ExtResource("1_yaxct")]
+script = ExtResource("2_qpfcg")

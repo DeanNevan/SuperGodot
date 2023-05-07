@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3eb8i5mehfkv"]
+
+[ext_resource type="PackedScene" uid="uid://dy3ht2gqsx14e" path="res://modules/general_setting_panel/src/main/GSP_Page/GSP_Page.tscn" id="1_pc1d3"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_Page/instances/GSP_PageAudio/GSP_PageAudio.gd" id="2_jgkx0"]
+
+[node name="GSP_PageAudio" instance=ExtResource("1_pc1d3")]
+script = ExtResource("2_jgkx0")

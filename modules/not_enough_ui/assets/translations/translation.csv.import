@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c54gng8j8ys3g"
+
+[deps]
+
+files=["res://modules/not_enough_ui/assets/translations/translation.zh.translation", "res://modules/not_enough_ui/assets/translations/translation.en.translation"]
+
+source_file="res://modules/not_enough_ui/assets/translations/translation.csv"
+dest_files=["res://modules/not_enough_ui/assets/translations/translation.zh.translation", "res://modules/not_enough_ui/assets/translations/translation.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

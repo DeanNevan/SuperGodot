@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://1mpqs8h8p08w"]
+
+[ext_resource type="PackedScene" uid="uid://dy3ht2gqsx14e" path="res://modules/general_setting_panel/src/main/GSP_Page/GSP_Page.tscn" id="1_iyost"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_Page/instances/GSP_PageOther/GSP_PageOther.gd" id="2_dalit"]
+
+[node name="GSP_PageOther" instance=ExtResource("1_iyost")]
+script = ExtResource("2_dalit")

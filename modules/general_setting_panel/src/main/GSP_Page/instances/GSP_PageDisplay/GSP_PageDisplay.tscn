@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5pi7p60x4q5w"]
+
+[ext_resource type="PackedScene" uid="uid://dy3ht2gqsx14e" path="res://modules/general_setting_panel/src/main/GSP_Page/GSP_Page.tscn" id="1_d2fum"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_Page/instances/GSP_PageDisplay/GSP_PageDisplay.gd" id="2_xpjhv"]
+[ext_resource type="PackedScene" uid="uid://dqk7gb0bfg135" path="res://modules/general_setting_panel/src/main/GSP_PageElement/instances/GSP_PageElementOptions/GSP_PageElementOptions.tscn" id="4_1jdk6"]
+[ext_resource type="PackedScene" uid="uid://cxtvil5qb2jn5" path="res://modules/general_setting_panel/src/main/GSP_PageElement/instances/GSP_PageElementValueSlider/GSP_PageElementValueSlider.tscn" id="5_b0623"]
+
+[node name="GSP_PageDisplay" instance=ExtResource("1_d2fum")]
+script = ExtResource("2_xpjhv")
+
+[node name="PageElementsList" parent="MarginContainer/HBoxContainer/ScrollContainer" index="0"]
+size_flags_horizontal = 3
+
+[node name="GSP_PageElementOptions" parent="MarginContainer/HBoxContainer/ScrollContainer/PageElementsList" index="0" instance=ExtResource("4_1jdk6")]
+layout_mode = 2
+title = "@s_FullScreen"
+options = Array[String](["@s_FullScreen", "@s_Windowed"])
+current_idx = 1
+id = "full_screen"
+info_text = "@s_Info_FullScreen"
+side_info_picture = false
+
+[node name="GSP_PageElementOptions2" parent="MarginContainer/HBoxContainer/ScrollContainer/PageElementsList" index="1" instance=ExtResource("4_1jdk6")]
+layout_mode = 2
+title = "@s_Resolution"
+options = Array[String](["1152x648", "", "1920x1080", "1600x900", "1280x720"])
+id = "resolution"
+info_text = "@s_Info_Resolution"
+side_info_picture = false
+
+[node name="GSP_PageElementOptionsSwitchScreen" parent="MarginContainer/HBoxContainer/ScrollContainer/PageElementsList" index="2" instance=ExtResource("4_1jdk6")]
+unique_name_in_owner = true
+layout_mode = 2
+title = "@s_SwitchScreen"
+id = "switch_screen"
+info_text = "@s_Info_SwitchScreen"
+side_info_picture = false
+
+[node name="GSP_PageElementValueSlider" parent="MarginContainer/HBoxContainer/ScrollContainer/PageElementsList" index="3" instance=ExtResource("5_b0623")]
+layout_mode = 2
+title = "@s_UIScale"
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+decimals = 1
+current_value = 1.0
+id = "ui_scale"
+info_text = "@s_Info_UIScale"
+need_for_restart = true
+side_info_picture = false
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/ScrollContainer/PageElementsList" index="4"]
+layout_mode = 2

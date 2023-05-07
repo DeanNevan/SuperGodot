@@ -1,0 +1,20 @@
+,zh,en
+@s_Title,标题,Title
+@s_Language,语言,Language
+@s_FullScreen,全屏,Full Screen
+@s_Resolution,分辨率,Resolution
+@s_UIScale,界面尺寸,UI Scale
+@s_Info_FullScreen,切换全屏显示,Switch Full Screen
+@s_Info_Resolution,切换分辨率显示,Switch Window Resolution
+@s_Info_UIScale,调节UI尺寸,Switch scale of UI
+@s_Info_SwitchScreen,切换窗口显示在哪个屏幕,Switch the screen the window displays
+@s_Windowed,窗口化,Windowed
+@s_Screen,屏幕,Screen
+@s_EditNeedForRestart,修改后需重启,Need restarting after edit
+@s_SwitchScreen,切换屏幕,Switch Screen
+@s_Yes,是,Yes
+@s_No,否,No
+@s_Text,文本,Text
+@s_Small,小,Small
+@s_Medium,中,Medium
+@s_Large,大,Large

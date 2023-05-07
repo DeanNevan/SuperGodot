@@ -14,6 +14,10 @@ config/name="SuperGodot"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_select={
@@ -23,6 +27,10 @@ ui_select={
 , Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://modules/not_enough_ui/assets/translations/translation.en.translation", "res://modules/not_enough_ui/assets/translations/translation.zh.translation", "res://modules/general_setting_panel/assets/translations/translation.en.translation", "res://modules/general_setting_panel/assets/translations/translation.zh.translation")
 
 [rendering]
 

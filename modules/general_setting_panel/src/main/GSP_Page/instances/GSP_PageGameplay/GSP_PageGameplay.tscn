@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyc86wv3xfqym"]
+
+[ext_resource type="PackedScene" uid="uid://dy3ht2gqsx14e" path="res://modules/general_setting_panel/src/main/GSP_Page/GSP_Page.tscn" id="1_lkru2"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_Page/instances/GSP_PageGameplay/GSP_PageGameplay.gd" id="2_esjc1"]
+[ext_resource type="PackedScene" uid="uid://dqk7gb0bfg135" path="res://modules/general_setting_panel/src/main/GSP_PageElement/instances/GSP_PageElementOptions/GSP_PageElementOptions.tscn" id="3_q357x"]
+
+[node name="GSP_PageGameplay" instance=ExtResource("1_lkru2")]
+script = ExtResource("2_esjc1")
+
+[node name="PageElementsList" parent="MarginContainer/HBoxContainer/ScrollContainer" index="0"]
+size_flags_horizontal = 3
+
+[node name="GSP_PageElementOptions" parent="MarginContainer/HBoxContainer/ScrollContainer/PageElementsList" index="0" instance=ExtResource("3_q357x")]
+layout_mode = 2
+title = "@s_Language"
+options = Array[String](["简体中文", "English"])
+id = "language"
+side_info_picture = false
+side_info_text = false

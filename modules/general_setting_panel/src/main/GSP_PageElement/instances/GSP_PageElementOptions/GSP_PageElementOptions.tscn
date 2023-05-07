@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqk7gb0bfg135"]
+
+[ext_resource type="PackedScene" uid="uid://btyidkcjeiw6u" path="res://modules/general_setting_panel/src/main/GSP_PageElement/GSP_PageElement.tscn" id="1_aflrk"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_PageElement/instances/GSP_PageElementOptions/GSP_PageElementOptions.gd" id="2_lm1vb"]
+
+[node name="GSP_PageElementOptions" instance=ExtResource("1_aflrk")]
+script = ExtResource("2_lm1vb")
+title = "@s_Title"
+options = Array[String]([])
+current_idx = 0
+
+[node name="BG" parent="." index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="LabelTitle" type="Label" parent="MarginContainer/HBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "@s_Title"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer" index="1"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+mouse_filter = 1
+
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

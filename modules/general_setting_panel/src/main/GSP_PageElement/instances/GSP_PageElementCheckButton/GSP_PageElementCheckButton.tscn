@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkr4jina3i3s2"]
+
+[ext_resource type="PackedScene" uid="uid://btyidkcjeiw6u" path="res://modules/general_setting_panel/src/main/GSP_PageElement/GSP_PageElement.tscn" id="1_mabm1"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_PageElement/instances/GSP_PageElementCheckButton/GSP_PageElementCheckButton.gd" id="2_wshat"]
+
+[node name="GSP_PageElementCheckButton" instance=ExtResource("1_mabm1")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -952.0
+offset_bottom = -595.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_wshat")
+title = "@s_Title"
+
+[node name="BG" parent="." index="0"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="LabelTitle" type="Label" parent="MarginContainer/HBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "@s_Title"
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/HBoxContainer" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+tooltip_text = "nihao"
+mouse_filter = 1
+
+[connection signal="toggled" from="MarginContainer/HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]

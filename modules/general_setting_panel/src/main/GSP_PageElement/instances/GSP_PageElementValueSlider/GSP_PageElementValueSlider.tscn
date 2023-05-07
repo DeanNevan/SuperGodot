@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxtvil5qb2jn5"]
+
+[ext_resource type="PackedScene" uid="uid://btyidkcjeiw6u" path="res://modules/general_setting_panel/src/main/GSP_PageElement/GSP_PageElement.tscn" id="1_nwvkd"]
+[ext_resource type="Script" path="res://modules/general_setting_panel/src/main/GSP_PageElement/instances/GSP_PageElementValueSlider/GSP_PageElementValueSlider.gd" id="2_sqast"]
+
+[node name="GSP_PageElementValueSlider" instance=ExtResource("1_nwvkd")]
+offset_right = 910.0
+script = ExtResource("2_sqast")
+title = "@s_Title"
+min_value = 1.0
+max_value = 100.0
+step = 1.0
+decimals = 0
+current_value = 0.0
+need_for_restart = false
+side_info_picture = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="LabelTitle" type="Label" parent="MarginContainer/HBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "@s_Title"
+
+[node name="LabelValue" type="Label" parent="MarginContainer/HBoxContainer" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Slider" type="HSlider" parent="MarginContainer/HBoxContainer" index="2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+tooltip_text = "nihao"
+mouse_filter = 1
+min_value = 1.0
+value = 1.0
+ticks_on_borders = true
+
+[connection signal="drag_ended" from="MarginContainer/HBoxContainer/Slider" to="." method="_on_slider_drag_ended"]
+[connection signal="drag_started" from="MarginContainer/HBoxContainer/Slider" to="." method="_on_slider_drag_started"]
